@@ -3,6 +3,7 @@ import pandas as pd
 import packages.gui.popup as pu
 import tkinter as tk
 import packages.date_time as gt
+import os
 
 path="D:\scandgo"
 def distribute_scanner(location):
@@ -30,7 +31,8 @@ def collect_scanner():
 	return sys_number
 
 def get_name(roll_no):
-	df = pd.read_excel(r'D:\scandgo\class_data.xlsx')
+	name_data_path=os.getcwd()+"\\name_data.xlsx"
+	df = pd.read_excel(name_data_path)
 	df.set_index("Roll_No", inplace=True)
 	return df.loc[roll_no,'Name']
 
@@ -53,6 +55,7 @@ def check_sys_conflict(sys_no,location):
 def class_code():
     global x,y,z
     window = tk.Tk()
+	
     window.title("Class Code")
     current_year=int(gt.dates()[8:])
     start_year = current_year-4
@@ -62,12 +65,12 @@ def class_code():
         start_year+=1
     department = ["CS","IT","EC","EE","CV","MC","MT"]
     section = ["A","B","C"]
-    yr = tk.StringVar()
+    yr = tk.StringVar(window)
     yr.set("Year")
-    dep = tk.StringVar()
-    dep.set(department[0])
-    sec = tk.StringVar()
-    sec.set(section[0])
+    dep = tk.StringVar(window)
+    dep.set("Department")
+    sec = tk.StringVar(window)
+    sec.set("Section")
     
     
     yr_menu = tk.OptionMenu(window,yr,*year)
