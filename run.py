@@ -10,6 +10,8 @@ file=open(path,"r+")
 output_path=file.readline()
 if output_path=="NULL":
     root = Tk()
+    icon_path=os.getcwd()+"\icon.ico"
+    root.iconbitmap(icon_path)
     root.withdraw()
     folder_selected = filedialog.askdirectory()
     file.seek(0)

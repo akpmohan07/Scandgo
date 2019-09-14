@@ -1,9 +1,8 @@
-import tkinter as tk
-  
+import os
+import tkinter as tk  
 from tkinter import messagebox  
   
 def distribute_roll_conflict(msg):
-	 
 	messagebox.showwarning("warning!",msg+"--Already bought a laptop.")  
 
 def distribute_sys_conflict(msg):

@@ -61,7 +61,6 @@ def check_sys_conflict(sys_no,location):
 def class_code():
     global x,y,z
     window = tk.Tk()
-	
     window.title("Class Code")
     current_year=int(gt.dates()[8:])
     start_year = current_year-4

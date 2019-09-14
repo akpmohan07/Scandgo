@@ -7,7 +7,7 @@ def home():
 	home = tk.Tk()
 	home.geometry("150x150+600+300")
 	home.title("Home")
-	icon_path=os.getcwd()+"\icon.ico"
+	icon_path=os.getcwd()+"/icon.ico"
 	home.iconbitmap(icon_path)
 	distribute_button = tk.Button(home,text="Distribute",command=call_distribute)
 	distribute_button.pack()
