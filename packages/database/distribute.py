@@ -9,7 +9,7 @@ import numpy as np
 def write(class_code):
 	
 	file_name = dt.dates()+"-"+class_code[0]+class_code[1]+"-"+class_code[2]+class_code[3]+"-"+class_code[4]+".xlsx"
-	location = gd.path +"\E-"+ file_name
+	location = gd.output_path() +"/E-"+ file_name
 	data = []
 	df1 = pd.DataFrame({'S.No':[],'Roll_No':[],'Name':[],'System_No':[],'Date':[],'In_Time':[],'Out_Time':[],'Status':[]})
 	df2 = pd.DataFrame({'S.No':[],'Roll_No':[],'Name':[],'System_No':[],'Date':[],'In_Time':[],'Out_Time':[],'Status':[]})

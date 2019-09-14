@@ -6,7 +6,7 @@ import packages.gui.popup as pu
 
 def write(class_code):
 	file_name = dt.dates()+"-"+class_code[0]+class_code[1]+"-"+class_code[2]+class_code[3]+"-"+class_code[4]+".xlsx"
-	location = gd.path +"\E-"+ file_name
+	location = gd.output_path() +"/E-"+ file_name
 	df = pd.read_excel(location)
 	writer = pd.ExcelWriter(location)
 	#df.to_excel(writer,index=False)

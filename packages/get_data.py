@@ -6,6 +6,12 @@ import packages.date_time as gt
 import os
 
 path="D:\scandgo"
+def output_path():
+	path=os.getcwd()+"\output_path.txt"
+	file=open(path,"r")
+	output_path=file.readline()
+	file.close()
+	return output_path
 def distribute_scanner(location):
 	value = []
 	rollno=  wc.webcam("Scan your ID card")
