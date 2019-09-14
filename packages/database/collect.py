@@ -24,8 +24,9 @@ def write(class_code):
 			pu.collect_sysnd_conflict(key)
 			continue
 		df.set_index("System_No",inplace=True)
-		if df.loc[key,'Status'] == "Returned":
+		if df.loc[key,'Status'] == "Returned":#system already collected
 			pu.collect_sysac_conflict(key)
+			df=df.reset_index()
 			continue
 
 		timee = dt.times()
