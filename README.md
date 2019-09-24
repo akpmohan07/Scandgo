@@ -1,2 +1,2 @@
 # Scandgo
-To automate logging system in Collage Laboratory using QR Code scan.
+To automate the logging system in College Laboratory using QR Code scan.
